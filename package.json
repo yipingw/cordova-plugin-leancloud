@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hybrid-Force/cordova-plugin-leancloud.git"
+    "url": "git+https://github.com/yipingw/cordova-plugin-leancloud.git"
   },
   "keywords": [
     "ecosystem:cordova",

@@ -79,10 +79,12 @@
     <source-file src="src/android/LeanAnalytics.java" target-dir="src/com/sum/cordova/leancloud"/>
     <source-file src="src/android/leancloud/Java-WebSocket-1.2.0-leancloud.jar" target-dir="libs" framework="true"/>
     <source-file src="src/android/leancloud/android-async-http-1.4.6.jar" target-dir="libs" framework="true"/>
-    <source-file src="src/android/leancloud/avoscloud-push-v3.1.4.jar" target-dir="libs" framework="true"/>
-    <source-file src="src/android/leancloud/avoscloud-sdk-v3.1.4.jar" target-dir="libs" framework="true"/>
-    <source-file src="src/android/leancloud/avoscloud-statistics-v3.1.4.jar" target-dir="libs" framework="true"/>
+    <source-file src="src/android/leancloud/avoscloud-push-v3.11.jar" target-dir="libs" framework="true"/>
+    <source-file src="src/android/leancloud/avoscloud-sdk-v3.11.jar" target-dir="libs" framework="true"/>
+    <source-file src="src/android/leancloud/avoscloud-statistics-v3.11.jar" target-dir="libs" framework="true"/>
     <source-file src="src/android/leancloud/fastjson.jar" target-dir="libs" framework="true"/>
     <source-file src="src/android/leancloud/httpmime-4.2.4.jar" target-dir="libs" framework="true"/>
+    <source-file src="src/android/leancloud/okhttp-2.5.0.jar" target-dir="libs" framework="true"/>
+    <source-file src="src/android/leancloud/okio-1.6.0.jar" target-dir="libs" framework="true"/>
   </platform>
 </plugin>
