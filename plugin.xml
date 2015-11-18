@@ -41,7 +41,11 @@
     <framework src="MobileCoreServices.framework"/>
     <framework src="CoreTelephony.framework"/>
     <framework src="CoreLocation.framework"/>
-    <framework src="libicucore.dylib"/>
+    <framework src="libicucore.tbd"/>
+    <framework src="libsqlite3.tbd"/>
+    <framework src="CoreMotion.framework"/>
+    <framework src="libz.tbd"/>
+    <framework src="libc++.tbd"/>
   </platform>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
