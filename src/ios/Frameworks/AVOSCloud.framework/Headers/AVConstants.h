@@ -2,30 +2,15 @@
 // Copyright 2013 AVOS, Inc. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import "AVAvailability.h"
+
 @class AVObject;
 @class AVUser;
 @class AVFile;
 
-//! Project version number for AVOSCloud.
-FOUNDATION_EXPORT double AVOSCloudVersionNumber;
-
-//! Project version string for AVOSCloud.
-FOUNDATION_EXPORT const unsigned char AVOSCloudVersionString[];
-
-// Version
-#define AVOSCLOUD_VERSION @"1.0.0"
-
-extern NSInteger const AVOSCLOUD_API_VERSION;
-
-// Platform
-#define AVOS_IOS_ONLY (TARGET_OS_IPHONE)
-#define AVOS_OSX_ONLY (TARGET_OS_MAC && !(TARGET_OS_IPHONE))
-
-extern NSString *const kPFDeviceType;
-
-#if AVOS_IOS_ONLY
+#if AV_IOS_ONLY
 #import <UIKit/UIKit.h>
-#else
+#elif AV_OSX_ONLY
 #import <Cocoa/Cocoa.h>
 @compatibility_alias UIImage NSImage;
 @compatibility_alias UIColor NSColor;
@@ -164,6 +149,14 @@ extern NSInteger const kAVErrorUserIdMismatch;
 extern NSInteger const kAVErrorUsernamePasswordMismatch;
 /*! @abstract 211: Could not find user. */
 extern NSInteger const kAVErrorUserNotFound;
+/*! @abstract 212: The mobile phone number is missing, and must be specified. */
+extern NSInteger const kAVErrorUserMobilePhoneMissing;
+/*! @abstract 213: An user with the specified mobile phone number was not found. */
+extern NSInteger const kAVErrorUserWithMobilePhoneNotFound;
+/*! @abstract 214: Mobile phone number has already been taken. */
+extern NSInteger const kAVErrorUserMobilePhoneNumberTaken;
+/*! @abstract 215: Mobile phone number isn't verified. */
+extern NSInteger const kAVErrorUserMobilePhoneNotVerified;
 /*! @abstract 250: Linked id missing from request */
 extern NSInteger const kAVErrorLinkedIdMissing;
 /*! @abstract 251: Invalid linked session */
@@ -184,4 +177,4 @@ typedef void (^AVProgressBlock)(NSInteger percentDone);
 typedef void (^AVFileResultBlock)(AVFile * file, NSError *error);
 typedef void (^AVDictionaryResultBlock)(NSDictionary * dict, NSError *error);
 
-#define AVDeprecated(explain) __attribute__((deprecated(explain)))
+#define AV_DEPRECATED(explain) __attribute__((deprecated(explain)))
